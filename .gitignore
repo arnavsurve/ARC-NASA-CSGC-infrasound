@@ -1,2 +1,5 @@
 notes/
 .DS_Store
+venv/
+requirements.txt
+datasets/
