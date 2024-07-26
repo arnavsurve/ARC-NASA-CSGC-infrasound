@@ -12,69 +12,40 @@ Datasets used, sourced from the Boise State University Infrasound Data Repositor
     - Taylor Tatum, Jacob Anderson
     - DOI: https://doi.org/10.18122/infrasound_data.11.boisestate
 
-Please create a new directory /datasets in the root of the project and download the datasets from the links above. The datasets are too large to be included in the repository and as such are included in the .gitignore file and are ignored by git.
+Please create a new directory `/datasets` in the root of the project and download the datasets from the links above. The datasets are too large to be included in the repository and as such are included in the `.gitignore` file to be ignored by git.
 
 
 ## Libraries
 
-Currently, the project requires InfraPy and ObsPy to run. The following instructions will guide you through installing the required libraries.
+Currently, the model requires ObsPy, SciKit-Learn, and NumPy to run. The following instructions will guide you through installing the required libraries.
 
-### Installing conda
+### Creating and configuring the environment
 
-InfraPy requires a conda environment to run. To configure the environment, run the following commands:
-
-- First ensure Anaconda or Miniconda is installed on your system. Download [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). Example instructions below to install Miniconda on Linux or MacOS.
-
-Linux/WSL:
+It is recommended to create a virtual environment to install the required libraries. This will prevent any conflicts with other projects you may be working on. To create and activate a virtual environment using venv, run the following commands:
 
 ```bash
-mkdir -p ~/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O  ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-
-# After installing, initialize Miniconda with one of the following commands depending on if you are using bash or zsh (hint: bash is the default shell for WSL (Ubuntu))
-~/miniconda/bin/conda init bash
-~/miniconda/bin/conda init zsh
-
-# Close and reopen your terminal to initialize Miniconda. You should see a (base) prefix in your terminal which indicates the base conda environment is automatically initialized. To disable automatically starting conda on terminal startup, run the following command:
-conda config --set auto_activate_base false
+python3 -m venv venv
+source venv/bin/activate
 ```
 
-MacOS:
+It is recommended to use `virtualenv` instead of `venv` as it is more reliable, .
 
 ```bash
-mkdir -p ~/miniconda3
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-
-# After installing, initialize Miniconda with one the following command depending on if you are using bash or zsh (hint: zsh is the default shell for MacOS)
-~/miniconda/bin/conda init bash
-~/miniconda/bin/conda init zsh
-
-# Close and reopen your terminal to initialize Miniconda. You should see a (base) prefix in your terminal which indicates the base conda environment is automatically initialized. To disable automatically starting conda on terminal startup, run the following command:
-conda config --set auto_activate_base false
+python -m pip install --user virtualenv
 ```
 
-### [InfraPy](https://github.com/LANL-Seismoacoustics/infrapy)
+After creating and activating the virtual environment, install the required libraries with:
 
-After installing conda, follow the instructions [here](https://github.com/LANL-Seismoacoustics/infrapy?tab=readme-ov-file#downloading) to create a new conda environment for InfraPy.
+```bash 
+pip install -r requirements.txt
+```
 
-**or**
-
-Run the following commands to create a new conda environment for InfraPy:
+To deactivate the virtual environment, run:
 
 ```bash
-conda create -n infrapy_env python=3.8
-conda activate infrapy_env
-
-pip install git+https://github.com/LANL-Seismoacoustics/infrapy.git
+deactivate
 ```
 
+## Running the model
 
-You can test the installation by trying to import the infrapy module in a Python script or REPL.
-
-```python
-import infrapy
-```
+To run the model, execute `python main.py` in the root of the project. The model will train on the dataset and output results to the console.
