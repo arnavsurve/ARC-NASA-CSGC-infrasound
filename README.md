@@ -61,4 +61,20 @@ conda config --set auto_activate_base false
 
 After installing conda, follow the instructions [here](https://github.com/LANL-Seismoacoustics/infrapy?tab=readme-ov-file#downloading) to create a new conda environment for InfraPy.
 
-**TODO** You can test the installation by trying to import the infrapy module in a Python script or running
+**or**
+
+Run the following commands to create a new conda environment for InfraPy:
+
+```bash
+conda create -n infrapy_env python=3.8
+conda activate infrapy_env
+
+pip install git+https://github.com/LANL-Seismoacoustics/infrapy.git
+```
+
+
+You can test the installation by trying to import the infrapy module in a Python script or REPL.
+
+```python
+import infrapy
+```
