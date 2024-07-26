@@ -15,4 +15,4 @@ Datasets used, sourced from the Boise State University Infrasound Data Repositor
 Please create a new directory /datasets in the root of the project and download the datasets from the links above. The datasets are too large to be included in the repository and as such are included in the .gitignore file and are ignored by git.
 
 
-# Please refer to the [dataset-testing](https://github.com/arnavsurve/ARC-NASA-CSGC-infrasound/tree/dataset-testing) branch to view current developlemt progress.
+# Please refer to the [dataset-testing](https://github.com/arnavsurve/ARC-NASA-CSGC-infrasound/tree/dataset-testing) branch to view current development progress.
