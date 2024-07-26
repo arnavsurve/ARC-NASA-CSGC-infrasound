@@ -28,7 +28,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-It is recommended to use `virtualenv` instead of `venv` as it is more reliable, .
+It is recommended to use `virtualenv` instead of `venv` as it is more reliable.
 
 ```bash
 python -m pip install --user virtualenv
@@ -48,4 +48,4 @@ deactivate
 
 ## Running the model
 
-To run the model, execute `python main.py` in the root of the project. The model will train on the dataset and output results to the console.
+To run the model, execute `python main.py` in the root of the project.
