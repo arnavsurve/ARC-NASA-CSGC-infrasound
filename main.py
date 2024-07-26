@@ -40,7 +40,9 @@ for file in miniseed_files:
     for tr in st:
         features = extract_features(tr)
         data.append(features)
-        labels.append(file.split('/')[-1].split('_')[0])
+        labels.append(file.split('/')[-1].split('_')[0]) # THIS IS VERY WRONG
+        # ^ currently the label is the filename, but it should be parameters specific to the data
+        # need to look at mseed files to see what the labels should be
 
 x = np.array(data)
 y = np.array(labels)
