@@ -43,6 +43,7 @@ for file in miniseed_files:
         labels.append(file.split('/')[-1].split('_')[0]) # THIS IS VERY WRONG
         # ^ currently the label is the filename, but it should be parameters specific to the data
         # need to look at mseed files to see what the labels should be
+        # run read.py to see what the data looks like
 
 x = np.array(data)
 y = np.array(labels)
