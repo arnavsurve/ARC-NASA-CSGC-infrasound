@@ -1,5 +1,6 @@
 notes/
-.DS_Store
+**/.DS_Store
 venv/
 datasets/
 infrapy/
+**/*.old
