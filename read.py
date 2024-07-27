@@ -11,4 +11,7 @@ for file in miniseed_files:
     st = read(file)
     print(st)
     for tr in st:
-        print(tr.stats)
+        print("\n", tr.stats)
+        print(tr.data, "\n")
+
+# TODO: add color to stream and trace output for better readability
