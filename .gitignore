@@ -4,3 +4,4 @@ venv/
 datasets/
 infrapy/
 **/*.old
+__pycache__/
