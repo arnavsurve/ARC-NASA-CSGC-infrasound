@@ -23,15 +23,15 @@ Currently, the model requires ObsPy, SciKit-Learn, and NumPy to run. The followi
 
 It is recommended to create a virtual environment to install the required libraries. This will prevent any conflicts with other projects you may be working on. To create and activate a virtual environment using venv, run the following commands:
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
 It is recommended to use `virtualenv` instead of `venv` as it is more reliable.
 
 ```bash
 python -m pip install --user virtualenv
+```
+
+```bash
+python3 -m virtualenv venv
+source venv/bin/activate
 ```
 
 After creating and activating the virtual environment, install the required libraries with:
