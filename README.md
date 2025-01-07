@@ -1,7 +1,5 @@
 # ARC-NASA-CSGC-infrasound
 
-## Please refer to the [dataset-testing](https://github.com/arnavsurve/ARC-NASA-CSGC-infrasound/tree/dataset-testing) branch to view current development progress.
-
 Research under Professor [Paulo Afonso](https://losrios.edu/about-los-rios/contact-us/employee-directory/employee?xid=x76049&id=1085001) at [AMERICAN RIVER COLLEGE (ARC)](https://arc.losrios.edu/) funded by [NASA California Space Grant Consortium (CSGC)](https://casgc.ucsd.edu/) to study infrasound collection and analysis.
 
 Datasets used, sourced from the Boise State University Infrasound Data Repository:
