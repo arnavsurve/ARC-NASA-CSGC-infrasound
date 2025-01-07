@@ -14,4 +14,43 @@ Datasets used, sourced from the Boise State University Infrasound Data Repositor
     - Taylor Tatum, Jacob Anderson
     - DOI: https://doi.org/10.18122/infrasound_data.11.boisestate
 
+
+Please create a new directory `/datasets` in the root of the project and download the datasets from the links above. The datasets are too large to be included in the repository and as such are included in the `.gitignore` file to be ignored by git.
+
+
+## Libraries
+
+Currently, the model requires ObsPy, SciKit-Learn, and NumPy to run. The following instructions will guide you through installing the required libraries.
+
+### Creating and configuring the environment
+
+It is recommended to create a virtual environment to install the required libraries. This will prevent any conflicts with other projects you may be working on. To create and activate a virtual environment using venv, run the following commands:
+
+It is recommended to use `virtualenv` instead of `venv` as it is more reliable.
+
+```bash
+python -m pip install --user virtualenv
+```
+
+```bash
+python3 -m virtualenv venv
+source venv/bin/activate
+```
+
+After creating and activating the virtual environment, install the required libraries with:
+
+```bash 
+pip install -r requirements.txt
+```
+
+To deactivate the virtual environment, run:
+
+```bash
+deactivate
+```
+
+## Running the model
+
+To run the model, execute `python main.py` in the root of the project.
+=======
 Please create a new directory /datasets in the root of the project and download the datasets from the links above. The datasets are too large to be included in the repository and as such are included in the .gitignore file and are ignored by git.
